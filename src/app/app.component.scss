@@ -1,0 +1,32 @@
+.header-text {
+  color: rgb(11, 172, 170);
+  font-size: 1.3em
+;
+}
+.header {
+  background: rgb(0, 0, 0, 0.3);
+}
+.example-container {
+  width: 100vw;
+  height: calc(100vh - 64px);
+  background: none;
+}
+
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-sidenav {
+  padding: 20px;
+  background: rgb(0, 0, 0, 0.3)
+}
+.nav-bar-lock {
+  margin: auto 0;
+  transition: 0.2s;
+  &.rotated {
+    transform: rotate(-90deg);
+  }
+}
