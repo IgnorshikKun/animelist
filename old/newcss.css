@@ -1,0 +1,55 @@
+title {
+    font-family: Calibri;
+    font-size: 11;
+}
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image:url(x.png);
+}
+header {
+    text-align:center;
+    Color:rgb(11, 172, 170);
+    font-family: Calibri;
+}
+hr {
+    margin: 15px;
+    border: none;
+    height: 2px;
+    background-image: -webkit-linear-gradient(25turn, rgba(255,2,5,.5), rgba(137,11,138,.5), rgba(27,123,187,.5), rgba(47,195,44,.5), rgba(255,91,2,.5), rgba(255,91,2,.5), rgba(253,201,1,.5), rgba(47,195,44,.5), rgba(27,123,187,.5), rgba(137,11,138,.5), rgba(255,2,5,.5));
+}
+section {
+    font-family: Calibri;
+    Color:#3f9bee;
+    margin: 35px;
+    float: left;
+}
+li {
+    Color:rgba(0, 0, 0, 0);
+}
+aside {
+    font-family: Calibri;
+    Color:#34ffbb;
+    border: dotted;
+    border-color: #3f9bee;
+    float: right;
+    padding: 20px;
+    width: 70%;
+    height: 300px;
+    font-size:140%;
+    align: middle;
+}
+
+a, a:visited {
+    Color:#3f9bee;
+}
+img {
+    width: 16%;
+    float:left;
+
+
+}
+pre {
+}
+
