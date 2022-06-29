@@ -8,6 +8,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatButtonModule } from "@angular/material/button";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatIconModule } from "@angular/material/icon";
+import { AnimeDisplayModule } from "../components/anime-display/anime-display.module";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { MatIconModule } from "@angular/material/icon";
     NgbModule,
     MatButtonModule,
     MatSidenavModule,
-    MatIconModule
+    MatIconModule,
+
+    AnimeDisplayModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

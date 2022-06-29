@@ -1,26 +1,19 @@
 <header class="d-flex p-3 header">
   <mat-icon type="button" (click)="drawer.toggle()" class="nav-bar-lock"
-            [class.rotated] = '!drawer.opened'>
+            [class.rotated]='!drawer.opened'>
     view_week
   </mat-icon>
   <h2 class="header-text m-3 m-auto">Мій Список Улюблених Аніме.</h2>
 </header>
-<mat-drawer-container class="example-container" autosize>
-  <mat-drawer #drawer class="example-sidenav"  mode="side">
-    <ng-template>
-      <button>hello</button>
-      <button>hello</button>
-      <button>hello</button>
-      <button>hello</button>
-    </ng-template>
-    <button>hello</button>
-    <button>hello</button>
-    <button>hello</button>
-    <button>hello</button>
-
+<mat-drawer-container class="example-container" autosize hasBackdrop="false">
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <button>sdsadasdasdas</button>
   </mat-drawer>
-
-  <div class="example-sidenav-content">
-  </div>
-
+  <mat-drawer-content class="w-100">
+    <aside>
+      <router-outlet>
+      </router-outlet>
+    </aside>
+  </mat-drawer-content>
 </mat-drawer-container>
+
