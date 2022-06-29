@@ -15,8 +15,6 @@
 .example-sidenav-content {
   display: flex;
   height: 100%;
-  align-items: center;
-  justify-content: center;
 }
 
 .example-sidenav {
@@ -29,4 +27,9 @@
   &.rotated {
     transform: rotate(-90deg);
   }
+}
+
+::ng-deep .mat-drawer-inner-container {
+  display: flex;
+  flex-direction: column;
 }
