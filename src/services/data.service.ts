@@ -44,11 +44,12 @@ export class DataService {
       middleSeriesMinuteTime: 120
     },
   ]
+
   getAnimeById (id: string | number): Anime | undefined {
-    return this.data.find(i => this.convertToString(i.id) === this.convertToString(id));
+    return this.data.find(i => DataService.convertToString(i.id) === DataService.convertToString(id));
   }
 
-  private convertToString(item: string | number): string {
+  private static convertToString(item: string | number): string {
     return item.toString().toLocaleLowerCase();
   }
 }
