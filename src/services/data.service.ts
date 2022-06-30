@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { Anime, AnimeLink } from "../main.interfaces";
 
 @Injectable({
-  providedIn: "root"
+  providedIn: "root",
 })
 export class DataService {
   constructor() { }

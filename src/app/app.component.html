@@ -3,7 +3,7 @@
             [class.rotated]='!drawer.opened'>
     view_week
   </mat-icon>
-  <h2 class="header-text m-3 m-auto">Мій Список Улюблених Аніме.</h2>
+  <h2 class="header-text m-3 m-auto" routerLink="./">Мій Список Улюблених Аніме.</h2>
 </header>
 <mat-drawer-container class="example-container" autosize hasBackdrop="false">
   <mat-drawer #drawer class="example-sidenav" mode="side">
@@ -12,7 +12,7 @@
        class="link m-2">
       {{link.name}}</a>
   </mat-drawer>
-  <mat-drawer-content class="w-100">
+  <mat-drawer-content class="w-auto">
     <aside>
       <router-outlet>
       </router-outlet>

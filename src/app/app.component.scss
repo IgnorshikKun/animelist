@@ -1,7 +1,8 @@
 .header-text {
   color: rgb(11, 172, 170);
-  font-size: 1.3em
-;
+  font-size: 1.3em;
+  cursor: pointer;
+  text-decoration: underline;
 }
 .header {
   background: rgb(0, 0, 0, 0.3);
@@ -31,6 +32,8 @@
 .link {
   color: #34ffbb;
   cursor: pointer;
+  font-size: max(1vw, 0.6em);
+  text-decoration: none;
 }
 
 ::ng-deep .mat-drawer-inner-container {
