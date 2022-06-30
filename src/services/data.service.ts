@@ -47,7 +47,7 @@ export class DataService {
   getAnimeById (id: string | number): Anime | undefined {
     return this.data.find(i => this.convertToString(i.id) === this.convertToString(id));
   }
-  
+
   private convertToString(item: string | number): string {
     return item.toString().toLocaleLowerCase();
   }
