@@ -9,6 +9,8 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatIconModule } from "@angular/material/icon";
 import { AnimeDisplayModule } from "../components/anime-display/anime-display.module";
+import { NotFoundPageModule } from "../components/not-found-page/not-found-page.module";
+import { CheckExistGuard } from "../services/check-exist.guard";
 
 @NgModule({
   declarations: [
@@ -22,10 +24,11 @@ import { AnimeDisplayModule } from "../components/anime-display/anime-display.mo
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
+    NotFoundPageModule,
 
     AnimeDisplayModule,
   ],
-  providers: [],
+  providers: [ CheckExistGuard ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
