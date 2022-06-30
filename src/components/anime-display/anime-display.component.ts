@@ -14,7 +14,7 @@ export class AnimeDisplayComponent implements OnInit {
     length: '500, 25мин',
     producer: 'Датэ Хаято',
     rating: '8.7',
-    urlss: 'https://animevost.org/uploads/posts/2016-06/1464842897_1.jpg',
+    url: 'https://animevost.org/uploads/posts/2016-06/1464842897_1.jpg',
   }
 
   constructor() { }
