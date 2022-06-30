@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Anime } from "../../main.interfaces";
 import { DataService } from "../../services/data.service";
 import { ActivatedRoute } from "@angular/router";
-import { first } from "rxjs";
 
 @Component({
   selector: 'app-anime-display',
@@ -19,7 +18,6 @@ export class AnimeDisplayComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params
-      .pipe(first())
       .subscribe(params => {
         this.item = this.dataService.getAnimeById(params['id'])
       })

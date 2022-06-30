@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { Anime } from "../main.interfaces";
+import { Anime, AnimeLink } from "../main.interfaces";
 
 @Injectable({
   providedIn: "root"
@@ -9,7 +9,7 @@ export class DataService {
   data: Anime[] = [
     {
       id: 1,
-      header: 'Наруто Ураганные Хроники',
+      name: 'Наруто Ураганные Хроники',
       startYear: 2007,
       genre: ['приключения', 'боевые искусства', 'сёнэн'],
       type: 'TB',
@@ -21,7 +21,7 @@ export class DataService {
     },
     {
       id: 2,
-      header: 'Внук мудреца',
+      name: 'Внук мудреца',
       startYear: 2019,
       genre: ['приключения', 'комедия', 'фэнтази'],
       type: 'TB',
@@ -33,7 +33,7 @@ export class DataService {
     },
     {
       id: 3,
-      header: 'Форма голоса',
+      name: 'Форма голоса',
       startYear: 2016,
       genre: ['драма', 'школа'],
       type: 'полнометражный фильм',
@@ -45,8 +45,14 @@ export class DataService {
     },
   ]
 
-  getAnimeById (id: string | number): Anime | undefined {
+  getAnimeById(id: string | number): Anime | undefined {
     return this.data.find(i => DataService.convertToString(i.id) === DataService.convertToString(id));
+  }
+
+  getAnimeLinkList(): AnimeLink[] {
+    return this.data.map(i => {
+      return { id: i.id, name: i.name }
+    });
   }
 
   private static convertToString(item: string | number): string {

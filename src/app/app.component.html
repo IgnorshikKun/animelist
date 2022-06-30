@@ -7,7 +7,10 @@
 </header>
 <mat-drawer-container class="example-container" autosize hasBackdrop="false">
   <mat-drawer #drawer class="example-sidenav" mode="side">
-    <button>sdsadasdasdas</button>
+    <a *ngFor="let link of itemLinks"
+       [routerLink]="'anime/' + link.id"
+       class="link m-2">
+      {{link.name}}</a>
   </mat-drawer>
   <mat-drawer-content class="w-100">
     <aside>

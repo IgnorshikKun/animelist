@@ -28,6 +28,10 @@
     transform: rotate(-450deg);
   }
 }
+.link {
+  color: #34ffbb;
+  cursor: pointer;
+}
 
 ::ng-deep .mat-drawer-inner-container {
   display: flex;

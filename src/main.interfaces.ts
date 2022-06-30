@@ -1,6 +1,6 @@
 export interface Anime {
   id: string | number,
-  header: string,
+  name: string,
   startYear: number,
   genre: string[],
   type: string,
@@ -9,4 +9,8 @@ export interface Anime {
   producer: string,
   rating: number,
   logo: string,
+}
+export interface AnimeLink {
+  id: string | number,
+  name: string;
 }
