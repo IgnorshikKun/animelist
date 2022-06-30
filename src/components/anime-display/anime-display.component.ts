@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Anime } from "../../main.interfaces";
+import { DataService } from "../../services/data.service";
+import { ActivatedRoute } from "@angular/router";
+import { first } from "rxjs";
 
 @Component({
   selector: 'app-anime-display',
@@ -6,20 +10,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./anime-display.component.scss']
 })
 export class AnimeDisplayComponent implements OnInit {
-  item = {
-    header: 'Наруто Ураганные Хроники',
-    startYear: 2007,
-    genre: 'приключения, боевые искусства, сёнэн',
-    type: 'TB',
-    length: '500, 25мин',
-    producer: 'Датэ Хаято',
-    rating: '8.7',
-    url: 'https://animevost.org/uploads/posts/2016-06/1464842897_1.jpg',
-  }
+  item?: Anime;
 
-  constructor() { }
+  constructor(
+    private dataService: DataService,
+    private route: ActivatedRoute,
+  ) { }
 
   ngOnInit(): void {
+    this.route.params
+      .pipe(first())
+      .subscribe(params => {
+        this.item = this.dataService.getAnimeById(params['id'])
+      })
+  }
+  joinGenre(items?: string[]): string {
+    return items?.join(', ') || '';
   }
 
 }

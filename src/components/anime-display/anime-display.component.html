@@ -1,14 +1,14 @@
 <div class="row anime-card m-auto w-75 h-auto p-2">
-  <img [src]="item.url"
+  <img [src]="item?.logo"
        class="col-sm-4"
        alt="img">
   <div class="col-sm-8 d-flex flex-column description">
-    <h3 class="m-2">{{item.header}}</h3>
-    <h5>Год выпуска: {{item.startYear}}</h5>
-    <h5>Жанр: {{item.genre}}</h5>
-    <h5>Тип: {{item.type}}</h5>
-    <h5>Количество серий: {{item.length}}</h5>
-    <h5>Режиссёр: {{item.producer}}</h5>
-    <h5>Рейтинг: {{item.rating}}</h5>
+    <h3 class="m-2">{{item?.header}}</h3>
+    <h5>Год выпуска: {{item?.startYear}}</h5>
+    <h5>Жанр: {{joinGenre(item?.genre)}}</h5>
+    <h5>Тип: {{item?.type}}</h5>
+    <h5>Количество серий: {{item?.series}} ({{item?.middleSeriesMinuteTime}}минут)</h5>
+    <h5>Режиссёр: {{item?.producer}}</h5>
+    <h5>Рейтинг: {{item?.rating}}</h5>
   </div>
 </div>

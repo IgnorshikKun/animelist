@@ -3,10 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AnimeDisplayComponent } from "../components/anime-display/anime-display.component";
 
 const routes: Routes = [
-  {
-    path: 'anime/azaza',
-    component: AnimeDisplayComponent,
-  }
+  { path: 'anime/:id', component: AnimeDisplayComponent, }
 ];
 
 @NgModule({
